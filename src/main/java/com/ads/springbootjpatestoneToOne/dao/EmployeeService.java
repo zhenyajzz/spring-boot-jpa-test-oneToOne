@@ -1,5 +1,6 @@
 package com.ads.springbootjpatestoneToOne.dao;
 
+import com.ads.springbootjpatestoneToOne.dto.EmployeeAddressDto;
 import com.ads.springbootjpatestoneToOne.model.Employee;
 
 import java.util.List;

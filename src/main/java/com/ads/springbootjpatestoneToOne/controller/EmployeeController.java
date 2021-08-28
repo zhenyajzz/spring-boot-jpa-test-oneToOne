@@ -1,7 +1,9 @@
 package com.ads.springbootjpatestoneToOne.controller;
 
 import com.ads.springbootjpatestoneToOne.dao.EmployeeService;
+import com.ads.springbootjpatestoneToOne.dto.EmployeeAddressDto;
 import com.ads.springbootjpatestoneToOne.model.Employee;
+import com.ads.springbootjpatestoneToOne.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,4 +45,5 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getAllEmployees() {
         return new ResponseEntity<>(employeeService.getAllEmployee(), HttpStatus.OK);
     }
+
 }
