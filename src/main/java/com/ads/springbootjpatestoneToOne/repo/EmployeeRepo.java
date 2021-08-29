@@ -15,5 +15,4 @@ public interface EmployeeRepo extends JpaRepository<Employee, Long> {
     @Query(value = "SELECT * FROM employeedetails AS e ORDER BY e.employee_name desc", nativeQuery = true)
     List<Employee> findByEmployeeNameOrderByEmployeeNameDesc();
 
-
 }
