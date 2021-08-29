@@ -17,8 +17,8 @@ public class EmplAddsController {
         this.mapEmplAdds = mapEmplAdds;
     }
 
-    @GetMapping("/gets")
-    public List<EmployeeAddressDto> findDto(){
+    @GetMapping("/findEmplAddsDto")
+    public List<EmployeeAddressDto> findEmplAddsDto(){
         return mapEmplAdds.findEmplAddsDto();
     }
 }

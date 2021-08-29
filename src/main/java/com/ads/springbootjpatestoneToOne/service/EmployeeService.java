@@ -3,19 +3,17 @@ package com.ads.springbootjpatestoneToOne.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.ads.springbootjpatestoneToOne.dao.EmployeeService;
-import com.ads.springbootjpatestoneToOne.dto.EmployeeAddressDto;
+import com.ads.springbootjpatestoneToOne.dao.EmployeeDao;
 import com.ads.springbootjpatestoneToOne.model.Employee;
 import com.ads.springbootjpatestoneToOne.repo.EmployeeRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeService implements EmployeeDao {
 
     private final EmployeeRepo employeeRepository;
 
-    public EmployeeServiceImpl(EmployeeRepo employeeRepository) {
+    public EmployeeService(EmployeeRepo employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
