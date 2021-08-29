@@ -53,6 +53,9 @@ public class EmployeeController {
         return employeeRepo.findByEmployeeNameOrderByEmployeeNameDesc();
     }
 
-
+    @GetMapping("/findEmployees")
+    public List<Employee> findEmp(){
+        return employeeRepo.findEmployees();
+    }
 
 }
