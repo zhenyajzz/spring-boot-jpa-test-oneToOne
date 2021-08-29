@@ -58,4 +58,8 @@ public class EmployeeController {
         return employeeRepo.findEmployees();
     }
 
+    @GetMapping("/findEmplAndAddr")
+    public List<Employee> findEmpAndAddr(){
+        return employeeRepo.findEmployeeAndAddress();
+    }
 }

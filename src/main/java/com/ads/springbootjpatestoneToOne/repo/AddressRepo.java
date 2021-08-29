@@ -26,4 +26,6 @@ public interface AddressRepo extends JpaRepository<Address,Long> {
     @Query(value = "SELECT new com.ads.springbootjpatestoneToOne.model.StreetCountJpa(COUNT(a), a.street)FROM Address as a GROUP BY a.street")
     List<StreetCountJpa> streetCountJPQL();
 
+    @Query(value = "SELECT a.id ,a.doornumber,a.city,a.street, e.id ,e.employee_code,e.employee_name FROM address as a RIGHT JOIN employeedetails as e ON a.id = e.id",nativeQuery = true)
+    List<Address> findAddressAndEmployees();
 }

@@ -50,4 +50,9 @@ public class AddressController {
     public List<StreetCountJpa> findStreet(){
         return addressRepo.streetCountJPQL();
     }
+
+    @GetMapping("/findAddAndEmpl")
+    public List<Address> find(){
+        return addressRepo.findAddressAndEmployees();
+    }
 }
